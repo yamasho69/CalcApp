@@ -7,17 +7,16 @@ import android.widget.TextView;
 
 public class SecondActivity extends AppCompatActivity {
 
+    TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
         Intent intent = getIntent();
+        double kotae = intent.getDoubleExtra("KOTAE", 0);
         TextView textView = (TextView)findViewById(R.id.textView);
-        textView.setText("tasu");
-        textView.setText("hiku");
-        textView.setText("kakeru");
-        textView.setText("waru");
-
+        textView.setText(String.valueOf(kotae));
     }
 }
